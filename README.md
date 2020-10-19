@@ -1,7 +1,8 @@
 # llvm-pass-skeleton
 
-A completely useless LLVM pass.
-It's for LLVM 3.8.
+A slightly-less-than-completely useless LLVM pass. Now it finds potentially-unsafe divisions (i.e. those guaranteed 
+to not be 0 within the same basic block) and wraps them in a guarded division function that prints and returns 0 on 
+division by 0. It's still for LLVM 3.8.
 
 Build:
 
